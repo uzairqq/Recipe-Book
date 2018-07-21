@@ -9,7 +9,7 @@ import { createWiresService } from 'selenium-webdriver/firefox';
 export class ServerssComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'not server was created!';
-  serverName = '';
+  serverName = 'TextServer';
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
