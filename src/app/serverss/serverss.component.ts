@@ -2,13 +2,18 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-serverss',
-  template: `<app-server></app-server><app-server></app-server>`,
+  templateUrl: './serverss.component.html',
   styleUrls: ['./serverss.component.css']
 })
 export class ServerssComponent implements OnInit {
+  allowNewServer = false;
 
-  constructor() { }
+  constructor() {
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000);
 
+  }
   ngOnInit() {
   }
 
