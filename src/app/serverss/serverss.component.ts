@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { createWiresService } from 'selenium-webdriver/firefox';
 
 @Component({
   selector: 'app-serverss',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ServerssComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'not server was created!';
+  serverName = '';
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
@@ -20,6 +22,10 @@ export class ServerssComponent implements OnInit {
   }
   onCreateServer() {
     return this.serverCreationStatus = 'server was created';
+  }
+
+  onUpdateServerName(event: Event) {
+    this.serverName = (<HTMLInputElement>event.target).value;
   }
 
 }
