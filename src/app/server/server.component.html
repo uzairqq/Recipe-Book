@@ -1,2 +1,5 @@
 <p>The First Server Component</p>
 <p [ngStyle]="{backgroundColor:getColor()}" [ngClass]="{online: serverStatus==='online'}"> server id = {{serverId}} and status is = {{serverStatus}}</p>
+<ul *ngFor="let server of servers">
+  <li>{{server}}</li>
+</ul>
