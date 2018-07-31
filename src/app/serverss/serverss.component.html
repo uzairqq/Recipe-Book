@@ -4,8 +4,9 @@
   Add Server
 </button>
 
-{{serverCreationStatus}}
-<app-server></app-server>
+<!-- {{serverCreationStatus}} -->
+<p *ngIf="serverCreated">Server uzair was created, server name is {{serverName}}</p>
 <app-server></app-server>
 
-<p>{{serverName}}</p>
+
+<!-- <p>{{serverName}}</p> -->
